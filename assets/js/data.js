@@ -2,30 +2,31 @@ const CV_DATA = {
   // Thông tin cơ bản (phần Hero & Footer)
   profile: {
     name: "Trịnh Văn Mạnh",
-    title: "Android Developer — 4 năm kinh nghiệm",
+    title: "Android Developer — gần 4 năm kinh nghiệm",
     location: "Hà Nội, Việt Nam",
     phone: "0889 111 300",
     email: "trinhmanhdiv@gmail.com",
     facebook: "fb.com/trinhmanhdiv",
-    tagline: "Sẵn sàng trao đổi về cơ hội Android Developer phù hợp."
+    tagline: "Sẵn sàng trao đổi thêm nếu có vị trí Android Developer phù hợp."
   },
 
   // Đoạn text giới thiệu Hero
-  heroIntro: "Phát triển và phát hành ứng dụng Android thực tế trên nhiều nhóm sản phẩm. Có nền tảng vững về Android native với Kotlin và Java, quen với toàn bộ vòng đời sản phẩm — từ thiết kế kiến trúc đến release và maintain lâu dài.",
+  heroIntro: "Android Developer tập trung vào Android native với Kotlin và Java, đã tham gia phát triển nhiều ứng dụng thực tế được phát hành trên Google Play.",
 
   // Đoạn text phần Giới thiệu chuyên môn
   aboutParagraphs: [
-    "Android Developer với 4 năm kinh nghiệm phát triển và phát hành ứng dụng Android trong môi trường product team. Có nền tảng vững về Android native với Kotlin và Java, quen với toàn bộ vòng đời sản phẩm — từ lên kế hoạch tính năng, triển khai đến release và maintain.",
-    "Đã tham gia phát triển ứng dụng trên nhiều nhóm sản phẩm khác nhau: utility app, photo editing, education và language translation. Có kinh nghiệm phối hợp với PM và Designer, tham gia technical planning, architecture discussion và feature estimation.",
-    "Bên cạnh công việc kỹ thuật, từng hỗ trợ quản lý team 3–5 người — bao gồm Git workflow, code review và mentoring — đã đào tạo 2 thực tập sinh trở thành nhân sự chính thức."
+    "Tôi tập trung chính vào Android native với Kotlin và Java, quen với quá trình phát triển tính năng từ lúc làm rõ yêu cầu, triển khai, kiểm thử đến phát hành và cập nhật sau đó.",
+    "Trong gần 4 năm làm việc, tôi đã tham gia nhiều nhóm sản phẩm khác nhau như tools, productivity, photo/video, personalization, education và translation. Trải nghiệm này giúp tôi thích nghi khá nhanh với các bài toán người dùng khác nhau và giữ được góc nhìn sản phẩm bên cạnh phần triển khai kỹ thuật.",
+    "Ngoài phần phát triển ứng dụng, tôi thường phối hợp với PM và Designer để rà soát luồng sử dụng, hoàn thiện UI/UX và trao đổi cách triển khai. Ở giai đoạn gần đây, tôi cũng có thời gian hỗ trợ một team nhỏ 3–5 người ở các đầu việc như code review, technical discussion, Git workflow và onboarding cho thành viên mới."
   ],
 
   // Danh sách Kỹ năng
   skills: [
     { label: "Ngôn ngữ", tags: ["Kotlin", "Java", "JNI", "C/C++"] },
-    { label: "Android", tags: ["Android SDK", "Jetpack Compose", "XML Layouts", "MVVM", "Clean Architecture"] },
+    { label: "Android", tags: ["Android SDK", "Jetpack Compose", "XML Layouts", "MVVM", "MVI", "Clean Architecture"] },
     { label: "Data & Async", tags: ["Coroutines", "Flow", "Room", "DataStore", "WorkManager"] },
-    { label: "Networking / DI", tags: ["Retrofit", "Hilt", "Dagger", "Firebase", "AdMob"] },
+    { label: "Networking / DI", tags: ["Ktor", "Retrofit", "Hilt", "Dagger"] },
+    { label: "Platforms", tags: ["Firebase", "AdMob", "IAP"] },
     { label: "Engineering", tags: ["Git", "Code Review", "Debugging", "Technical Planning", "Mentoring", "Product Thinking"] }
   ],
 
@@ -35,15 +36,15 @@ const CV_DATA = {
       role: "Android Developer",
       company: "ALLSOFT CO., LTD",
       period: "04/2022 – 04/2026",
-      duration: "4 năm",
-      domains: ["Utility App", "Photo Editing", "Education", "Language Translation"],
+      duration: "",
+      domains: ["Tools", "Productivity", "Photo/Video", "Personalization", "Education", "Translation"],
       bullets: [
-        "<strong>Hỗ trợ quản lý team 3–5 người</strong> — bao gồm tổ chức Git workflow, code review, góp ý kỹ thuật và theo dõi tiến độ triển khai.",
-        "<strong>Tham gia trực tiếp vào architecture discussion, feature estimation và technical direction</strong> cho nhiều sản phẩm, đóng góp vào định hướng kỹ thuật chung của team.",
-        "<strong>Xây dựng và vận hành ứng dụng theo hướng end-to-end</strong> — từ thiết kế tính năng, triển khai, tối ưu hiệu năng đến release và maintain sau phát hành.",
-        "Phối hợp chặt chẽ với PM và Designer để hoàn thiện product flow, cải thiện UI/UX và bám sát nhu cầu thực tế của người dùng.",
-        "<strong>Mentoring thực tập sinh từ mức cơ bản đến có thể làm việc độc lập</strong> — đã đào tạo 2 người trở thành nhân sự chính thức.",
-        "Phát triển và duy trì nhiều ứng dụng trên các nhóm sản phẩm khác nhau, bao gồm screen translation, Plant ID, magnifier, keyboard translation và nhiều utility app khác — một số có quy mô lớn trên Google Play."
+        "Phát triển và duy trì nhiều ứng dụng Android trên các nhóm sản phẩm khác nhau, tham gia vào quá trình triển khai tính năng, phát hành và cập nhật sau đó.",
+        "Làm việc chính với Android native bằng Kotlin/Java, xử lý UI, business logic, networking và hoàn thiện trải nghiệm sử dụng trong quá trình phát triển sản phẩm.",
+        "Với một số ứng dụng, tham gia xuyên suốt ở phía Android từ lúc làm rõ phạm vi tính năng, triển khai giao diện, phát triển tính năng, kiểm thử đến phát hành trên Google Play.",
+        "Phối hợp với PM và Designer để làm rõ yêu cầu, rà soát luồng sử dụng và điều chỉnh UI/UX theo mục tiêu và tệp người dùng của từng sản phẩm.",
+        "Tham gia code review và trao đổi cách triển khai cho một số đầu việc, ưu tiên hướng xử lý phù hợp với codebase và dễ duy trì về sau.",
+        "Ở một số giai đoạn, hỗ trợ team nhỏ 3–5 người ở Git workflow, code review và onboarding cho thành viên mới; đồng thời hướng dẫn thực tập sinh trong giai đoạn đầu."
       ]
     }
   ],
@@ -51,64 +52,64 @@ const CV_DATA = {
   // Danh sách dự án (thay text & thêm icon/link sau này)
   projects: [
     {
-      name: "Lingo Translator AI",
-      category: "Language Translation",
-      desc: "Ứng dụng dịch thuật giọng nói và văn bản thời gian thực hỗ trợ 100+ ngôn ngữ, kết hợp nhận diện hình ảnh qua camera.",
-      role: "Android Lead",
-      contribution: "Thiết kế kiến trúc Clean Architecture, tích hợp Google ML Kit & API OpenAI, tối ưu tốc độ kết xuất luồng âm thanh < 500ms.",
-      result: "5M+ Downloads, rating 4.6/5 trên Google Play",
-      playLink: "#",
-      qrImage: "" // Điền đường dẫn tới ảnh QR (ví dụ: assets/images/qr1.png)
-    },
-    {
-      name: "Plant Identifier & Care",
-      category: "Education",
-      desc: "Ứng dụng nhận dạng cây cối bằng Camera và cung cấp lịch trình tưới nước/bón phân tự động.",
-      role: "Core Developer",
-      contribution: "Tích hợp TensorFlow Lite model để nhận diện, tối ưu file size, quản lý local database lịch nhắc nhở bằng Room.",
-      result: "Top 10 Education category, 1M+ MAU",
-      playLink: "#",
-      qrImage: ""
-    },
-    {
-      name: "SnapEdit Pro",
-      category: "Photo Editing",
-      desc: "Công cụ chỉnh sửa ảnh chuyên nghiệp tích hợp AI xóa phông, xóa vật thể dư thừa và tự động làm nét ảnh.",
+      name: "Printer App: In từ điện thoại (Falcon)",
+      category: "Productivity / Printing Utility",
+      desc: "Ứng dụng hỗ trợ kết nối và in tài liệu trực tiếp từ điện thoại, phục vụ nhu cầu in ảnh, PDF và các nội dung phổ biến trên thiết bị di động.",
       role: "Android Developer",
-      contribution: "Làm việc với JNI/C++ để xử lý lõi thuật toán xóa vật thể, tối ưu memory cache chống OOM khi load ảnh 4K.",
-      result: "Tăng 40% tốc độ xử lý ảnh ẵm giải App of the month",
-      playLink: "#",
-      qrImage: ""
+      contribution: "Tham gia xuyên suốt ở phía Android từ lúc làm rõ phạm vi tính năng, hoàn thiện giao diện, phát triển các chức năng chính, kiểm thử đến phát hành trên Google Play.",
+      result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
+      playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp",
+      qrImage: "assets/images/qr/falcon.png"
     },
     {
-      name: "Pocket Magnifier",
-      category: "Utility",
-      desc: "Biến ống kính điện thoại thành kính lúp đọc chữ siêu nhỏ, kết hợp filter màu cho người mù màu.",
-      role: "Solo Developer",
-      contribution: "Owning toàn bộ project từ setup CameraX zoom logic, UI/UX đến release và phân tích Crashlytics.",
-      result: "Đạt 100K Downloads organic trong 2 tháng",
-      playLink: "#",
-      qrImage: ""
-    },
-    {
-      name: "Voice Recorder Plus",
-      category: "Utility",
-      desc: "Ứng dụng ghi âm chất lượng cao, tự động đồng bộ hóa lên Cloud và chuyển giọng nói thành văn bản.",
+      name: "Máy ghi âm (Có khử ồn)",
+      category: "Tools / Productivity",
+      desc: "Ứng dụng ghi âm chất lượng cao, tích hợp lọc tiếng ồn để hỗ trợ nhu cầu học tập, họp hành và công việc hằng ngày.",
       role: "Android Developer",
-      contribution: "Xử lý lifecycle khó của background recording service bằng WorkManager, giải quyết triệt để lỗi mất ghi âm trên các dòng máy OEM (Xiaomi, Oppo).",
-      result: "Crash-free rate 99.9%, App ghi âm chủ lực của team",
-      playLink: "#",
-      qrImage: ""
+      contribution: "Tham gia tương đối đầy đủ trong quá trình xây dựng ứng dụng, tập trung vào các tính năng chính liên quan đến ghi âm, hoàn thiện flow sử dụng, kiểm thử và tinh chỉnh trải nghiệm trước khi phát hành.",
+      result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
+      playLink: "https://play.google.com/store/apps/details?id=com.fftools.audio_recorder",
+      qrImage: "assets/images/qr/audio-recorder.png"
     },
     {
-      name: "Math Solver Camera",
-      category: "Education",
-      desc: "Quét bài toán qua camera để tìm ra lời giải từng bước cho học sinh cấp 2 & cấp 3.",
-      role: "Mid Developer",
-      contribution: "Kết nối server để trả realtime socket, custom view vẽ Bounding Box bao quanh công thức toán chuẩn xác và mượt mà.",
-      result: "Top trending dịp Back to School 2024",
-      playLink: "#",
-      qrImage: ""
+      name: "Background Eraser - Remove BG",
+      category: "Photography / Tools",
+      desc: "Ứng dụng tự động xóa nền ảnh bằng AI, phục vụ nhu cầu làm ảnh sản phẩm cho seller online hoặc chỉnh ảnh cá nhân nhanh gọn.",
+      role: "Android Developer",
+      contribution: "Phối hợp với UI/UX để hoàn thiện luồng chọn ảnh, preview kết quả, chỉnh sửa và xuất ảnh; đồng thời tham gia triển khai các màn hình chính và tinh chỉnh trải nghiệm sử dụng trước khi phát hành.",
+      result: "Sản phẩm đạt 100.000+ lượt tải trên Google Play.",
+      playLink: "https://play.google.com/store/apps/details?id=com.fftools.removebackground",
+      qrImage: "assets/images/qr/remove-bg.png"
+    },
+    {
+      name: "Fluid Wallpaper: Magic Fluids",
+      category: "Personalization",
+      desc: "Ứng dụng hình nền động tương tác, hướng tới trải nghiệm thị giác sinh động và cá nhân hóa thiết bị.",
+      role: "Android Developer",
+      contribution: "Tham gia triển khai các màn hình chính, điều hướng và những điểm tương tác quan trọng; phối hợp với Designer để hoàn thiện visual flow và tinh chỉnh cảm giác sử dụng trước khi phát hành.",
+      result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
+      playLink: "https://play.google.com/store/apps/details?id=com.fftools.fluidwallpaper",
+      qrImage: "assets/images/qr/fluid-wallpaper.png"
+    },
+    {
+      name: "English Japanese Translator",
+      category: "Education / Translation",
+      desc: "Ứng dụng dịch hai chiều Anh–Nhật và hỗ trợ học từ vựng cho người lao động hoặc du học sinh tại Nhật Bản.",
+      role: "Android Developer",
+      contribution: "Tham gia phát triển các tính năng chính, sắp xếp lại luồng cho các tác vụ được dùng thường xuyên và tinh chỉnh giao diện để ứng dụng dễ dùng hơn với nhóm người dùng mục tiêu.",
+      result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
+      playLink: "https://play.google.com/store/apps/details?id=com.bktranslator.enlishjapanese",
+      qrImage: "assets/images/qr/en-jp-translator.png"
+    },
+    {
+      name: "AI Trendy Photo/Video Creator",
+      category: "Art & Design / AI Creator Tool",
+      desc: "Ứng dụng tạo ảnh và video theo xu hướng AI, hướng tới người dùng cần tạo nội dung nhanh.",
+      role: "Android Developer",
+      contribution: "Tham gia triển khai các flow tạo nội dung và tinh chỉnh các bước chính như chọn mẫu, tạo kết quả và xuất file để trải nghiệm sử dụng liền mạch hơn.",
+      result: "Sản phẩm đạt 10.000+ lượt tải trên Google Play.",
+      playLink: "https://play.google.com/store/apps/details?id=com.ai.tools.trend",
+      qrImage: "assets/images/qr/ai-trendy.png"
     }
   ],
 
