@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trịnh Văn Mạnh — Android Developer</title>
+  <meta name="description" content="Android Developer với 4 năm kinh nghiệm phát triển và phát hành ứng dụng Android thực tế. Kotlin, Jetpack Compose, MVVM, Clean Architecture, end-to-end delivery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+
+/* ═══════════════════
+   TOKENS
+═══════════════════ */
+:root {
+  --bg:           #f6f6f5;
+  --bg-white:     #ffffff;
+  --surface:      #edece8;
+  --border:       #e2e1dd;
+  --border-hi:    #c9c8c3;
+
+  --tx:           #17171a;
+  --tx-2:         #50505a;
+  --tx-3:         #9999a5;
+
+  --ac:           #1a6358;
+  --ac-mid:       #e5f1ef;
+  --ac-hi:        #145249;
+
+  --mw:      860px;
+  --px:      28px;
+  --px-sm:   18px;
+
+  --r:       8px;
+  --r-sm:    5px;
+  --ease:    130ms ease;
+}
+
+/* ═══════════════════
+   RESET
+═══════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--tx);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════════════
+   NAV
+═══════════════════ */
+#nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  background: rgba(246,246,245,0.91);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--ease);
+}
+#nav.scrolled { border-color: var(--border); }
+
+.nav-inner {
+  max-width: var(--mw);
+  margin: 0 auto;
+  padding: 0 var(--px);
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--tx);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  color: var(--tx-2);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+.nav-links a:hover { color: var(--tx); }
+.nav-links .nav-cta {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ac);
+  border: 1px solid var(--ac);
+  padding: 5px 14px;
+  border-radius: var(--r-sm);
+  transition: background var(--ease), color var(--ease);
+}
+.nav-links .nav-cta:hover { background: var(--ac); color: #fff; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4.5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--tx);
+  border-radius: 2px;
+}
+
+.nav-mobile { display: none; }
+
+/* ═══════════════════
+   LAYOUT
+═══════════════════ */
+.page-wrap { padding-top: 54px; }
+
+section {
+  max-width: var(--mw);
+  margin: 0 auto;
+  padding: 80px var(--px);
+}
+
+.divider { height: 1px; background: var(--border); }
+
+/* Section eyebrow + heading */
+.s-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ac);
+  margin-bottom: 9px;
+}
+.s-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--tx);
+  letter-spacing: -0.022em;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background var(--ease), color var(--ease), border-color var(--ease);
+}
+.btn-fill   { background: var(--ac); color: #fff; }
+.btn-fill:hover { background: var(--ac-hi); }
+.btn-out    { background: transparent; color: var(--tx); border-color: var(--border); }
+.btn-out:hover  { background: var(--surface); border-color: var(--border-hi); }
+
+/* ═══════════════════
+   HERO
+═══════════════════ */
+#hero { padding-top: 104px; padding-bottom: 90px; }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ac);
+  margin-bottom: 18px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--ac);
+  border-radius: 50%;
+}
+
+#hero h1 {
+  font-size: clamp(36px, 5.5vw, 50px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--tx);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.hero-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--tx-2);
+  margin-bottom: 22px;
+  letter-spacing: -0.01em;
+}
+.hero-intro {
+  font-size: 15px;
+  color: var(--tx-2);
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Contact line */
+.hero-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.c-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--tx-2);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+.c-item:hover { color: var(--ac); }
+.c-item svg { width: 13px; height: 13px; opacity: 0.5; flex-shrink: 0; }
+.c-sep { width: 3px; height: 3px; background: var(--border-hi); border-radius: 50%; }
+
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ═══════════════════
+   ABOUT
+═══════════════════ */
+#about { padding-top: 72px; padding-bottom: 72px; }
+
+.about-body {
+  font-size: 15px;
+  color: var(--tx-2);
+  line-height: 1.82;
+  max-width: 650px;
+}
+.about-body p + p { margin-top: 16px; }
+
+/* ═══════════════════
+   SKILLS
+═══════════════════ */
+#skills { padding-top: 72px; padding-bottom: 72px; }
+
+.skills-list { display: flex; flex-direction: column; gap: 15px; }
+
+.sk-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px 24px;
+  align-items: start;
+}
+.sk-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--tx);
+  padding-top: 4px;
+  line-height: 1.4;
+}
+.sk-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.sk-tag {
+  font-size: 12px;
+  color: var(--tx-2);
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 4px;
+  transition: border-color var(--ease), color var(--ease);
+  cursor: default;
+}
+.sk-tag:hover { border-color: var(--ac); color: var(--ac); }
+
+/* ═══════════════════
+   EXPERIENCE
+═══════════════════ */
+#experience { padding-top: 72px; padding-bottom: 72px; }
+
+.exp-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 36px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.exp-role  { font-size: 16.5px; font-weight: 700; color: var(--tx); letter-spacing: -0.015em; margin-bottom: 3px; }
+.exp-co    { font-size: 13.5px; font-weight: 500; color: var(--ac); }
+.exp-when  { font-size: 12.5px; color: var(--tx-3); white-space: nowrap; text-align: right; line-height: 1.55; }
+
+.exp-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+.d-tag {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ac);
+  background: var(--ac-mid);
+  padding: 2px 9px;
+  border-radius: 4px;
+}
+
+/* ⟵ KEY FIX: use a simple li with padding-left for bullet */
+.exp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+}
+.exp-list li {
+  padding-left: 16px;
+  position: relative;
+  font-size: 14px;
+  color: var(--tx-2);
+  line-height: 1.72;
+}
+.exp-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--ac);
+  font-size: 20px;
+  line-height: 1.18;
+  font-weight: 700;
+}
+.exp-list strong {
+  font-weight: 600;
+  color: var(--tx);
+}
+
+/* ═══════════════════
+   PROJECTS
+═══════════════════ */
+#projects { padding-top: 72px; padding-bottom: 72px; }
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.proj-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--ease);
+}
+.proj-card:hover { border-color: var(--border-hi); }
+
+.proj-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.proj-name { font-size: 14.5px; font-weight: 700; color: var(--tx); letter-spacing: -0.01em; line-height: 1.3; }
+.proj-cat  { font-size: 11px; font-weight: 500; color: var(--ac); background: var(--ac-mid); padding: 2px 8px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; }
+.proj-desc { font-size: 12.5px; color: var(--tx-2); line-height: 1.65; }
+
+.proj-meta { display: flex; flex-direction: column; gap: 6px; }
+.pm-row    { display: grid; grid-template-columns: 70px 1fr; gap: 6px; }
+.pm-k      { font-size: 11px; font-weight: 600; color: var(--tx-3); letter-spacing: 0.05em; text-transform: uppercase; padding-top: 1px; }
+.pm-v      { font-size: 12.5px; color: var(--tx-3); font-style: italic; line-height: 1.5; }
+
+.proj-foot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--surface);
+  margin-top: auto;
+}
+.proj-play {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ac);
+  text-decoration: none;
+  border: 1px solid var(--ac);
+  padding: 3px 11px;
+  border-radius: 4px;
+  transition: background var(--ease), color var(--ease);
+}
+.proj-play:hover { background: var(--ac); color: #fff; }
+
+.qr-ph {
+  width: 34px;
+  height: 34px;
+  border: 1px dashed var(--border-hi);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.qr-ph svg { width: 14px; height: 14px; color: var(--tx-3); opacity: 0.4; }
+
+.proj-note {
+  font-size: 12px;
+  color: var(--tx-3);
+  text-align: center;
+  margin-top: 18px;
+  padding: 10px;
+  background: var(--surface);
+  border-radius: var(--r-sm);
+}
+
+/* ═══════════════════
+   EDUCATION
+═══════════════════ */
+#education { padding-top: 64px; padding-bottom: 64px; }
+
+.edu-row { display: flex; align-items: center; gap: 14px; }
+.edu-ico {
+  width: 38px;
+  height: 38px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.edu-ico svg { width: 16px; height: 16px; color: var(--tx-3); }
+.edu-school { font-size: 15px; font-weight: 600; color: var(--tx); margin-bottom: 2px; }
+.edu-detail { font-size: 13px; color: var(--tx-2); }
+
+/* ═══════════════════
+   CONTACT / FOOTER
+═══════════════════ */
+#contact-block { background: var(--tx); }
+
+.ct-inner {
+  max-width: var(--mw);
+  margin: 0 auto;
+  padding: 64px var(--px);
+}
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: start;
+}
+.ct-name  { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.025em; margin-bottom: 5px; }
+.ct-sub   { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
+.ct-line  { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13.5px; color: rgba(255,255,255,0.38); line-height: 1.65; }
+
+.ct-items { display: flex; flex-direction: column; gap: 15px; }
+.ct-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  transition: opacity var(--ease);
+}
+.ct-row:hover { opacity: 0.75; }
+.ct-ico {
+  width: 34px;
+  height: 34px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ct-ico svg { width: 14px; height: 14px; color: rgba(255,255,255,0.6); }
+.ct-lbl { font-size: 10.5px; color: rgba(255,255,255,0.28); letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 1px; }
+.ct-val { font-size: 13.5px; color: rgba(255,255,255,0.75); }
+
+.ft-bar {
+  max-width: var(--mw);
+  margin: 0 auto;
+  padding: 16px var(--px);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ft-bar span { font-size: 11.5px; color: rgba(255,255,255,0.2); }
+
+/* ═══════════════════
+   RESPONSIVE
+═══════════════════ */
+@media (max-width: 680px) {
+  section       { padding: 60px var(--px-sm); }
+  #hero         { padding-top: 84px; padding-bottom: 72px; }
+  #hero h1      { font-size: 30px; }
+
+  .nav-links    { display: none; }
+  .nav-toggle   { display: flex; }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 14px var(--px-sm) 18px;
+  }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile a {
+    font-size: 14px;
+    color: var(--tx-2);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-mobile a:last-child { border-bottom: none; }
+
+  .sk-row         { grid-template-columns: 1fr; gap: 7px; }
+  .proj-grid      { grid-template-columns: 1fr; }
+  .exp-header     { flex-direction: column; gap: 4px; }
+  .exp-when       { text-align: left; }
+  .exp-card       { padding: 22px 18px; }
+  .ct-grid        { grid-template-columns: 1fr; gap: 36px; }
+  .ct-inner       { padding: 48px var(--px-sm); }
+  .c-sep          { display: none; }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════
+     NAV
+═══════════════ -->
+<nav id="nav" role="navigation" aria-label="Điều hướng chính">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">Trịnh Văn Mạnh</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#skills">Kỹ năng</a></li>
+      <li><a href="#experience">Kinh nghiệm</a></li>
+      <li><a href="#projects">Dự án</a></li>
+      <li><a href="#contact-block" class="nav-cta">Liên hệ</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about"         class="nav-m-link">Giới thiệu</a>
+    <a href="#skills"        class="nav-m-link">Kỹ năng</a>
+    <a href="#experience"    class="nav-m-link">Kinh nghiệm</a>
+    <a href="#projects"      class="nav-m-link">Dự án</a>
+    <a href="#education"     class="nav-m-link">Học vấn</a>
+    <a href="#contact-block" class="nav-m-link">Liên hệ</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- ═══════════════
+     HERO
+═══════════════ -->
+<section id="hero">
+  <div class="hero-eyebrow">Sẵn sàng cơ hội mới &nbsp;·&nbsp; Hà Nội</div>
+
+  <h1>Trịnh Văn Mạnh</h1>
+  <p class="hero-sub">Android Developer &mdash; 4 năm kinh nghiệm</p>
+
+  <p class="hero-intro">
+    Phát triển và phát hành ứng dụng Android thực tế trên nhiều nhóm sản phẩm.
+    Có nền tảng vững về Android native với Kotlin và Java, quen với toàn bộ vòng đời sản phẩm
+    — từ thiết kế kiến trúc đến release và maintain lâu dài.
+  </p>
+
+  <div class="hero-contact">
+    <span class="c-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+      Hà Nội, Việt Nam
+    </span>
+    <span class="c-sep" aria-hidden="true"></span>
+    <a href="tel:0889111300" class="c-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      0889 111 300
+    </a>
+    <span class="c-sep" aria-hidden="true"></span>
+    <a href="mailto:trinhmanhdiv@gmail.com" class="c-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="M2 7l10 7 10-7"/>
+      </svg>
+      trinhmanhdiv@gmail.com
+    </a>
+  </div>
+
+  <div class="hero-actions">
+    <a href="#experience" class="btn btn-fill">Xem kinh nghiệm</a>
+    <a href="#projects"   class="btn btn-out">Xem dự án</a>
+    <a href="mailto:trinhmanhdiv@gmail.com" class="btn btn-out">Liên hệ</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════
+     ABOUT
+═══════════════ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="s-label">Giới thiệu</div>
+  <h2 id="about-h" class="s-heading">Tóm tắt chuyên môn</h2>
+  <div class="about-body">
+    <p>
+      Android Developer với 4 năm kinh nghiệm phát triển và phát hành ứng dụng Android
+      trong môi trường product team. Có nền tảng vững về Android native với Kotlin và Java,
+      quen với toàn bộ vòng đời sản phẩm — từ lên kế hoạch tính năng, triển khai
+      đến release và maintain.
+    </p>
+    <p>
+      Đã tham gia phát triển ứng dụng trên nhiều nhóm sản phẩm khác nhau: utility app,
+      photo editing, education và language translation. Có kinh nghiệm phối hợp với PM và Designer,
+      tham gia technical planning, architecture discussion và feature estimation.
+    </p>
+    <p>
+      Bên cạnh công việc kỹ thuật, từng hỗ trợ quản lý team 3–5 người — bao gồm Git workflow,
+      code review và mentoring — đã đào tạo 2 thực tập sinh trở thành nhân sự chính thức.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════
+     SKILLS
+═══════════════ -->
+<section id="skills" aria-labelledby="skills-h">
+  <div class="s-label">Kỹ năng</div>
+  <h2 id="skills-h" class="s-heading">Tổng quan kỹ thuật</h2>
+
+  <div class="skills-list">
+    <div class="sk-row">
+      <span class="sk-label">Ngôn ngữ</span>
+      <div class="sk-tags">
+        <span class="sk-tag">Kotlin</span>
+        <span class="sk-tag">Java</span>
+        <span class="sk-tag">JNI</span>
+        <span class="sk-tag">C/C++</span>
+      </div>
+    </div>
+    <div class="sk-row">
+      <span class="sk-label">Android</span>
+      <div class="sk-tags">
+        <span class="sk-tag">Android SDK</span>
+        <span class="sk-tag">Jetpack Compose</span>
+        <span class="sk-tag">XML Layouts</span>
+        <span class="sk-tag">MVVM</span>
+        <span class="sk-tag">Clean Architecture</span>
+      </div>
+    </div>
+    <div class="sk-row">
+      <span class="sk-label">Data &amp; Async</span>
+      <div class="sk-tags">
+        <span class="sk-tag">Coroutines</span>
+        <span class="sk-tag">Flow</span>
+        <span class="sk-tag">Room</span>
+        <span class="sk-tag">DataStore</span>
+        <span class="sk-tag">WorkManager</span>
+      </div>
+    </div>
+    <div class="sk-row">
+      <span class="sk-label">Networking / DI</span>
+      <div class="sk-tags">
+        <span class="sk-tag">Retrofit</span>
+        <span class="sk-tag">Hilt</span>
+        <span class="sk-tag">Dagger</span>
+        <span class="sk-tag">Firebase</span>
+        <span class="sk-tag">AdMob</span>
+      </div>
+    </div>
+    <div class="sk-row">
+      <span class="sk-label">Engineering</span>
+      <div class="sk-tags">
+        <span class="sk-tag">Git</span>
+        <span class="sk-tag">Code Review</span>
+        <span class="sk-tag">Debugging</span>
+        <span class="sk-tag">Technical Planning</span>
+        <span class="sk-tag">Mentoring</span>
+        <span class="sk-tag">Product Thinking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════
+     EXPERIENCE
+═══════════════ -->
+<section id="experience" aria-labelledby="exp-h">
+  <div class="s-label">Kinh nghiệm</div>
+  <h2 id="exp-h" class="s-heading">Lịch sử làm việc</h2>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Android Developer</div>
+        <!-- ✏️ Thay [Tên công ty] bằng tên thực tế -->
+        <div class="exp-co">[Tên công ty]</div>
+      </div>
+      <!-- ✏️ Thay khoảng thời gian bên dưới -->
+      <div class="exp-when">[MM/YYYY] – [MM/YYYY]<br>4 năm</div>
+    </div>
+
+    <div class="exp-domains">
+      <span class="d-tag">Utility App</span>
+      <span class="d-tag">Photo Editing</span>
+      <span class="d-tag">Education</span>
+      <span class="d-tag">Language Translation</span>
+    </div>
+
+    <ul class="exp-list">
+      <li>
+        <strong>Hỗ trợ quản lý team 3–5 người</strong> — bao gồm tổ chức Git workflow, code review,
+        góp ý kỹ thuật và theo dõi tiến độ triển khai.
+      </li>
+      <li>
+        <strong>Tham gia trực tiếp vào architecture discussion, feature estimation và technical direction</strong>
+        cho nhiều sản phẩm, đóng góp vào định hướng kỹ thuật chung của team.
+      </li>
+      <li>
+        <strong>Xây dựng và vận hành ứng dụng theo hướng end-to-end</strong> — từ thiết kế tính năng,
+        triển khai, tối ưu hiệu năng đến release và maintain sau phát hành.
+      </li>
+      <li>
+        Phối hợp chặt chẽ với PM và Designer để hoàn thiện product flow, cải thiện UI/UX
+        và bám sát nhu cầu thực tế của người dùng.
+      </li>
+      <li>
+        <strong>Mentoring thực tập sinh từ mức cơ bản đến có thể làm việc độc lập</strong> —
+        đã đào tạo 2 người trở thành nhân sự chính thức.
+      </li>
+      <li>
+        Phát triển và duy trì nhiều ứng dụng trên các nhóm sản phẩm khác nhau, bao gồm
+        screen translation, Plant ID, magnifier, keyboard translation và nhiều utility app khác
+        — một số có quy mô lớn trên Google Play.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════
+     PROJECTS
+═══════════════ -->
+<section id="projects" aria-labelledby="proj-h">
+  <div class="s-label">Dự án tiêu biểu</div>
+  <h2 id="proj-h" class="s-heading">Một số sản phẩm đã tham gia</h2>
+
+  <div class="proj-grid">
+
+    <!-- ✏️ PROJECT 1 -->
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">[Tên ứng dụng 1]</div>
+        <span class="proj-cat">[Category]</span>
+      </div>
+      <p class="proj-desc">[Mô tả ngắn — ứng dụng giải quyết vấn đề gì, dành cho ai.]</p>
+      <div class="proj-meta">
+        <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">[Vai trò của bạn]</span></div>
+        <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">[Đóng góp chính]</span></div>
+        <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">[Kết quả đo lường được]</span></div>
+      </div>
+      <div class="proj-foot">
+        <!-- ✏️ Thay # bằng link Google Play -->
+        <a href="#" class="proj-play">Google Play ↗</a>
+        <!-- ✏️ Thay bằng <img> QR khi có -->
+        <div class="qr-ph" title="QR Code">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/>
+            <rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="proj-card">
+      <div class="proj-head"><div class="proj-name">[Tên ứng dụng 2]</div><span class="proj-cat">[Category]</span></div>
+      <p class="proj-desc">[Mô tả ngắn — ứng dụng giải quyết vấn đề gì, dành cho ai.]</p>
+      <div class="proj-meta">
+        <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">[Vai trò]</span></div>
+        <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">[Đóng góp chính]</span></div>
+        <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">[Kết quả]</span></div>
+      </div>
+      <div class="proj-foot">
+        <a href="#" class="proj-play">Google Play ↗</a>
+        <div class="qr-ph" title="QR Code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/></svg></div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="proj-card">
+      <div class="proj-head"><div class="proj-name">[Tên ứng dụng 3]</div><span class="proj-cat">[Category]</span></div>
+      <p class="proj-desc">[Mô tả ngắn — ứng dụng giải quyết vấn đề gì, dành cho ai.]</p>
+      <div class="proj-meta">
+        <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">[Vai trò]</span></div>
+        <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">[Đóng góp chính]</span></div>
+        <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">[Kết quả]</span></div>
+      </div>
+      <div class="proj-foot">
+        <a href="#" class="proj-play">Google Play ↗</a>
+        <div class="qr-ph" title="QR Code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/></svg></div>
+      </div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="proj-card">
+      <div class="proj-head"><div class="proj-name">[Tên ứng dụng 4]</div><span class="proj-cat">[Category]</span></div>
+      <p class="proj-desc">[Mô tả ngắn — ứng dụng giải quyết vấn đề gì, dành cho ai.]</p>
+      <div class="proj-meta">
+        <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">[Vai trò]</span></div>
+        <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">[Đóng góp chính]</span></div>
+        <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">[Kết quả]</span></div>
+      </div>
+      <div class="proj-foot">
+        <a href="#" class="proj-play">Google Play ↗</a>
+        <div class="qr-ph" title="QR Code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/></svg></div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="proj-card">
+      <div class="proj-head"><div class="proj-name">[Tên ứng dụng 5]</div><span class="proj-cat">[Category]</span></div>
+      <p class="proj-desc">[Mô tả ngắn — ứng dụng giải quyết vấn đề gì, dành cho ai.]</p>
+      <div class="proj-meta">
+        <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">[Vai trò]</span></div>
+        <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">[Đóng góp chính]</span></div>
+        <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">[Kết quả]</span></div>
+      </div>
+      <div class="proj-foot">
+        <a href="#" class="proj-play">Google Play ↗</a>
+        <div class="qr-ph" title="QR Code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/></svg></div>
+      </div>
+    </div>
+
+    <!-- PROJECT 6 -->
+    <div class="proj-card">
+      <div class="proj-head"><div class="proj-name">[Tên ứng dụng 6]</div><span class="proj-cat">[Category]</span></div>
+      <p class="proj-desc">[Mô tả ngắn — ứng dụng giải quyết vấn đề gì, dành cho ai.]</p>
+      <div class="proj-meta">
+        <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">[Vai trò]</span></div>
+        <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">[Đóng góp chính]</span></div>
+        <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">[Kết quả]</span></div>
+      </div>
+      <div class="proj-foot">
+        <a href="#" class="proj-play">Google Play ↗</a>
+        <div class="qr-ph" title="QR Code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/></svg></div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="proj-note">Thông tin từng dự án sẽ được cập nhật — tên ứng dụng, link Google Play và QR code.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════
+     EDUCATION
+═══════════════ -->
+<section id="education" aria-labelledby="edu-h">
+  <div class="s-label">Học vấn</div>
+  <h2 id="edu-h" class="s-heading" style="margin-bottom:22px;">Bằng cấp</h2>
+  <div class="edu-row">
+    <div class="edu-ico" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/>
+        <path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5"/>
+      </svg>
+    </div>
+    <div>
+      <div class="edu-school">Cao đẳng nghề Bách Khoa Hà Nội</div>
+      <div class="edu-detail">Công nghệ thông tin &nbsp;·&nbsp; Đã tốt nghiệp</div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<!-- ═══════════════
+     CONTACT / FOOTER
+═══════════════ -->
+<div id="contact-block">
+  <div class="ct-inner">
+    <div class="ct-grid">
+      <div>
+        <div class="ct-name">Trịnh Văn Mạnh</div>
+        <div class="ct-sub">Android Developer &nbsp;·&nbsp; Hà Nội, Việt Nam</div>
+        <p class="ct-line">Sẵn sàng trao đổi về cơ hội Android Developer phù hợp.</p>
+      </div>
+      <div class="ct-items">
+        <a href="mailto:trinhmanhdiv@gmail.com" class="ct-row">
+          <div class="ct-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ct-lbl">Email</div>
+            <div class="ct-val">trinhmanhdiv@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:0889111300" class="ct-row">
+          <div class="ct-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ct-lbl">Điện thoại</div>
+            <div class="ct-val">0889 111 300</div>
+          </div>
+        </a>
+        <span class="ct-row" style="cursor:default;pointer-events:none;">
+          <div class="ct-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ct-lbl">Địa điểm</div>
+            <div class="ct-val">Hà Nội, Việt Nam</div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bar">
+    <span>© 2026 Trịnh Văn Mạnh</span>
+    <span>Android Developer · Hà Nội</span>
+  </div>
+</div>
+
+<!-- ═══════════════
+     JS — minimal
+═══════════════ -->
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  const toggle = document.getElementById('navToggle');
+  const mob    = document.getElementById('navMobile');
+  toggle.addEventListener('click', () => {
+    const open = mob.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+  });
+  document.querySelectorAll('.nav-m-link').forEach(l => {
+    l.addEventListener('click', () => {
+      mob.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Mở menu');
+    });
+  });
+</script>
+
+</body>
+</html>
