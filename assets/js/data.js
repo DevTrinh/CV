@@ -107,12 +107,17 @@ const CV_DATA = {
     },
     {
       name: "English Japanese Translator",
-      category: "Education / Translation",
-      desc: "Ứng dụng dịch hai chiều Anh–Nhật và hỗ trợ học từ vựng cho người lao động hoặc du học sinh tại Nhật Bản.",
+      category: "Productivity / Language Utility",
+      desc: "Ứng dụng dịch Anh - Nhật trên Android, hỗ trợ cả dịch online và offline để đáp ứng nhu cầu sử dụng linh hoạt.",
       role: "Android Developer",
-      contribution: "Tham gia phát triển các tính năng chính, sắp xếp lại luồng cho các tác vụ được dùng thường xuyên và tinh chỉnh giao diện để ứng dụng dễ dùng hơn với nhóm người dùng mục tiêu.",
+      scopeLabel: "Phạm vi phụ trách",
+      scope: "Phụ trách phát triển phía Android với kiến trúc MVVM, tổ chức dependency injection bằng Hilt/Dagger và triển khai các luồng dịch thuật phục vụ cả nhu cầu online lẫn offline.",
+      challengeLabel: "Bài toán chính",
+      challenge: "Xây dựng trải nghiệm dịch ổn định và dễ dùng giữa hai chế độ online và offline, trong đó online sử dụng Google Translate API còn offline sử dụng ML Kit để đảm bảo khả năng sử dụng ngay cả khi thiết bị không có kết nối mạng.",
+      techLabel: "Tech nổi bật",
+      tech: "MVVM, Hilt/Dagger, Google Translate API, ML Kit",
       result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
-      playLink: "https://play.google.com/store/apps/details?id=com.bktranslator.enlishjapanese",
+      playLink: "https://play.google.com/store/apps/details?id=com.bktranslator.enlishjapanese"
     },
     {
       name: "AI Trendy Photo/Video Creator",
