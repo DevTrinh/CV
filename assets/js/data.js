@@ -88,7 +88,7 @@ const CV_DATA = {
       challengeLabel: "Bài toán chính",
       challenge: "Tổ chức luồng xử lý tách nền theo cả hướng online và offline, cân bằng giữa chất lượng kết quả, độ ổn định và trải nghiệm sử dụng trên thiết bị di động.",
       techLabel: "Tech nổi bật",
-      tech: "Kotlin, MVVM, Koin, API integration, offline model integration (u2net.ptl)",
+      tech: "MVVM, Koin, internal image-processing API, offline model integration (PyTorch Lite / u2net.ptl)",
       result: "Sản phẩm đạt 100.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.fftools.removebackground"
     },
@@ -102,7 +102,7 @@ const CV_DATA = {
       challengeLabel: "Bài toán chính",
       challenge: "Xử lý bài toán hiệu năng và độ mượt cho hiệu ứng chất lỏng thời gian thực, đảm bảo phản hồi thao tác tốt và duy trì trải nghiệm hiển thị ổn định trên nhiều thiết bị Android.",
       techLabel: "Tech nổi bật",
-      tech: "Kotlin, MVVM, Koin, XML, real-time graphics rendering",
+      tech: "Real-time graphics rendering, GPU-based effects, MVVM, Koin, XML",
       result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.fftools.fluidwallpaper"
     },
