@@ -23,9 +23,9 @@ const CV_DATA = {
   // Danh sách Kỹ năng
   skills: [
     { label: "Ngôn ngữ", tags: ["Kotlin", "Java", "JNI", "C/C++"] },
-    { label: "Android", tags: ["Android SDK", "Jetpack Compose", "XML Layouts", "MVVM", "MVI", "Clean Architecture"] },
+    { label: "Android", tags: ["Android SDK/NDK", "Jetpack Compose", "XML Layouts", "MVVM", "MVI", "Clean Architecture"] },
     { label: "Data & Async", tags: ["Coroutines", "Flow", "Room", "DataStore", "WorkManager"] },
-    { label: "Networking / DI", tags: ["Ktor", "Retrofit", "Hilt", "Dagger"] },
+    { label: "Networking / DI", tags: ["Ktor", "Retrofit", "Koin", "Hilt", "Dagger"] },
     { label: "Platforms", tags: ["Firebase", "AdMob", "IAP"] },
     { label: "Engineering", tags: ["Git", "Code Review", "Debugging", "Technical Planning", "Mentoring", "Product Thinking"] }
   ],
