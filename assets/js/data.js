@@ -116,7 +116,7 @@ const CV_DATA = {
       challengeLabel: "Bài toán chính",
       challenge: "Xây dựng trải nghiệm dịch ổn định và dễ dùng giữa hai chế độ online và offline, trong đó online sử dụng Google Translate API còn offline sử dụng ML Kit để đảm bảo khả năng sử dụng ngay cả khi thiết bị không có kết nối mạng.",
       techLabel: "Tech nổi bật",
-      tech: "MVVM, Hilt/Dagger, Google Translate API, ML Kit",
+      tech: "Google Translate API, ML Kit offline translation, MVVM, Hilt/Dagger",
       result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.bktranslator.enlishjapanese"
     },
@@ -130,7 +130,7 @@ const CV_DATA = {
       challengeLabel: "Bài toán chính",
       challenge: "Xây dựng trải nghiệm tạo ảnh/video bằng AI theo hướng rõ ràng và dễ dùng, đồng thời tổ chức cơ chế credit, lưu trữ ảnh và quản lý prompt/title để có thể cập nhật nội dung theo trend một cách linh hoạt.",
       techLabel: "Tech nổi bật",
-      tech: "MVVM, Hilt, Replicate API, Firebase",
+      tech: "Replicate API, Firebase Firestore, Firebase Storage, credit system, MVVM, Hilt",
       result: "Sản phẩm đạt 10.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.ai.tools.trend"
     }
