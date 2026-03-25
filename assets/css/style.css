@@ -372,7 +372,7 @@ section {
 .proj-desc { font-size: 12.5px; color: var(--tx-2); line-height: 1.65; }
 
 .proj-meta { display: flex; flex-direction: column; gap: 6px; }
-.pm-row    { display: grid; grid-template-columns: 70px 1fr; gap: 6px; }
+.pm-row    { display: grid; grid-template-columns: 110px 1fr; gap: 6px; }
 .pm-k      { font-size: 11px; font-weight: 600; color: var(--tx-3); letter-spacing: 0.05em; text-transform: uppercase; padding-top: 1px; }
 .pm-v      { font-size: 12.5px; color: var(--tx-3); font-style: italic; line-height: 1.5; }
 

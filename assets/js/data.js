@@ -54,11 +54,14 @@ const CV_DATA = {
     {
       name: "Printer App: In từ điện thoại (Falcon)",
       category: "Productivity / Printing Utility",
-      desc: "Ứng dụng hỗ trợ kết nối và in tài liệu trực tiếp từ điện thoại, phục vụ nhu cầu in ảnh, PDF và các nội dung phổ biến trên thiết bị di động.",
+      desc: "Ứng dụng in tài liệu và hình ảnh trực tiếp từ điện thoại.",
       role: "Android Developer",
-      contribution: "Phụ trách xuyên suốt phía Android từ giai đoạn tiếp nhận yêu cầu, tự phân tích sản phẩm, lựa chọn giải pháp kỹ thuật, thiết kế UI/UX, phát triển tính năng, tích hợp quảng cáo, kiểm thử đến đóng gói bản AAB để phát hành trên Google Play.",
+      scopeLabel: "Phạm vi phụ trách",
+      scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, tích hợp quảng cáo đến build AAB và phát hành trên Google Play.",
+      challengeLabel: "Bài toán chính",
+      challenge: "Xử lý PDF, hình ảnh và tích hợp printer SDK trong codebase Java + Kotlin theo kiến trúc MVP để đảm bảo luồng in ổn định và dễ dùng.",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
-      playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp",
+      playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp"
     },
     {
       name: "Máy ghi âm (Có khử ồn)",
