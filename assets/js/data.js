@@ -121,12 +121,17 @@ const CV_DATA = {
     },
     {
       name: "AI Trendy Photo/Video Creator",
-      category: "Art & Design / AI Creator Tool",
-      desc: "Ứng dụng tạo ảnh và video theo xu hướng AI, hướng tới người dùng cần tạo nội dung nhanh.",
+      category: "AI / Creative Utility",
+      desc: "Ứng dụng tạo ảnh và video theo xu hướng trên Android, sử dụng AI generation flow để giúp người dùng bắt trend nhanh hơn.",
       role: "Android Developer",
-      contribution: "Tham gia triển khai các flow tạo nội dung và tinh chỉnh các bước chính như chọn mẫu, tạo kết quả và xuất file để trải nghiệm sử dụng liền mạch hơn.",
+      scopeLabel: "Phạm vi phụ trách",
+      scope: "Phát triển phía Android với kiến trúc MVVM, sử dụng Hilt cho dependency injection, tích hợp Replicate API cho luồng tạo nội dung bằng AI, đồng thời triển khai hệ thống credit và lưu trữ dữ liệu bằng Firebase để hỗ trợ cập nhật trend nhanh.",
+      challengeLabel: "Bài toán chính",
+      challenge: "Xây dựng trải nghiệm tạo ảnh/video bằng AI theo hướng rõ ràng và dễ dùng, đồng thời tổ chức cơ chế credit, lưu trữ ảnh và quản lý prompt/title để có thể cập nhật nội dung theo trend một cách linh hoạt.",
+      techLabel: "Tech nổi bật",
+      tech: "MVVM, Hilt, Replicate API, Firebase",
       result: "Sản phẩm đạt 10.000+ lượt tải trên Google Play.",
-      playLink: "https://play.google.com/store/apps/details?id=com.ai.tools.trend",
+      playLink: "https://play.google.com/store/apps/details?id=com.ai.tools.trend"
     }
   ],
 
