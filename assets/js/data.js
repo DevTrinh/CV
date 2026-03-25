@@ -93,12 +93,17 @@ const CV_DATA = {
     },
     {
       name: "Fluid Wallpaper: Magic Fluids",
-      category: "Personalization",
-      desc: "Ứng dụng hình nền động tương tác, hướng tới trải nghiệm thị giác sinh động và cá nhân hóa thiết bị.",
+      category: "Personalization / Interactive Wallpaper",
+      desc: "Ứng dụng live wallpaper tương tác trên Android với hiệu ứng chất lỏng thời gian thực.",
       role: "Android Developer",
-      contribution: "Tham gia triển khai các màn hình chính, điều hướng và những điểm tương tác quan trọng; phối hợp với Designer để hoàn thiện visual flow và tinh chỉnh cảm giác sử dụng trước khi phát hành.",
+      scopeLabel: "Phạm vi phụ trách",
+      scope: "Phụ trách phát triển phía Android, bao gồm tổ chức codebase theo MVVM, sử dụng Koin cho dependency injection, xây dựng giao diện XML và triển khai các phần liên quan đến hiệu ứng đồ họa thời gian thực trong live wallpaper.",
+      challengeLabel: "Bài toán chính",
+      challenge: "Xử lý bài toán hiệu năng và độ mượt cho hiệu ứng chất lỏng thời gian thực, đảm bảo phản hồi thao tác tốt và duy trì trải nghiệm hiển thị ổn định trên nhiều thiết bị Android.",
+      techLabel: "Tech nổi bật",
+      tech: "Kotlin, MVVM, Koin, XML, real-time graphics rendering",
       result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
-      playLink: "https://play.google.com/store/apps/details?id=com.fftools.fluidwallpaper",
+      playLink: "https://play.google.com/store/apps/details?id=com.fftools.fluidwallpaper"
     },
     {
       name: "English Japanese Translator",
