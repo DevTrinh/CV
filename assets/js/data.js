@@ -11,11 +11,11 @@ const CV_DATA = {
   },
 
   // Đoạn text giới thiệu Hero
-  heroIntro: "Android Developer tập trung vào Android native với Kotlin và Java, đã tham gia phát triển nhiều ứng dụng thực tế được phát hành trên Google Play.",
+  heroIntro: "Android Developer tập trung vào Android native với Kotlin và Java, đã tham gia phát triển nhiều ứng dụng thực tế được release trên Google Play.",
 
   // Đoạn text phần Giới thiệu chuyên môn
   aboutParagraphs: [
-    "Tôi tập trung chính vào Android native với Kotlin và Java, quen với quá trình phát triển tính năng từ lúc làm rõ yêu cầu, triển khai, kiểm thử đến phát hành và cập nhật sau đó.",
+    "Tôi tập trung chính vào Android native với Kotlin và Java, quen với quá trình phát triển tính năng từ lúc làm rõ yêu cầu, triển khai, kiểm thử đến release và maintain.",
     "Trong gần 4 năm làm việc, tôi đã tham gia nhiều nhóm sản phẩm khác nhau như tools, productivity, photo/video, personalization, education và translation. Trải nghiệm này giúp tôi thích nghi khá nhanh với các bài toán người dùng khác nhau và giữ được góc nhìn sản phẩm bên cạnh phần triển khai kỹ thuật.",
     "Ngoài phần phát triển ứng dụng, tôi thường phối hợp với PM và Designer để rà soát luồng sử dụng, hoàn thiện UI/UX và trao đổi cách triển khai. Ở giai đoạn gần đây, tôi cũng có thời gian hỗ trợ một team nhỏ 3–5 người ở các đầu việc như code review, technical discussion, Git workflow và onboarding cho thành viên mới."
   ],
@@ -39,12 +39,12 @@ const CV_DATA = {
       duration: "",
       domains: ["Tools", "Productivity", "Photo/Video", "Personalization", "Education", "Translation"],
       bullets: [
-        "Phát triển và duy trì nhiều ứng dụng Android trên các nhóm sản phẩm khác nhau, tham gia vào quá trình triển khai tính năng, phát hành và cập nhật sau đó.",
+        "Phát triển và duy trì nhiều ứng dụng Android trên các nhóm sản phẩm khác nhau, tham gia vào quá trình triển khai tính năng, release và maintain.",
         "Làm việc chính với Android native bằng Kotlin/Java, xử lý UI, business logic, networking và hoàn thiện trải nghiệm sử dụng trong quá trình phát triển sản phẩm.",
-        "Với một số ứng dụng, tham gia xuyên suốt ở phía Android từ lúc làm rõ phạm vi tính năng, triển khai giao diện, phát triển tính năng, kiểm thử đến phát hành trên Google Play.",
+        "Với một số ứng dụng, tham gia xuyên suốt ở phía Android từ lúc làm rõ phạm vi tính năng, triển khai giao diện, phát triển tính năng, kiểm thử đến release trên Google Play.",
         "Phối hợp với PM và Designer để làm rõ yêu cầu, rà soát luồng sử dụng và điều chỉnh UI/UX theo mục tiêu và tệp người dùng của từng sản phẩm.",
         "Tham gia code review và trao đổi cách triển khai cho một số đầu việc, ưu tiên hướng xử lý phù hợp với codebase và dễ duy trì về sau.",
-        "Ở một số giai đoạn, hỗ trợ team nhỏ 3–5 người ở Git workflow, code review và onboarding cho thành viên mới; đồng thời hướng dẫn thực tập sinh trong giai đoạn đầu."
+        "Ở một số giai đoạn, hỗ trợ team nhỏ 3–5 người ở Git workflow, code review và onboarding cho thành viên mới, đồng thời hướng dẫn thực tập sinh trong giai đoạn đầu."
       ]
     }
   ],
@@ -57,7 +57,7 @@ const CV_DATA = {
       desc: "Ứng dụng in tài liệu và hình ảnh trực tiếp từ điện thoại.",
       role: "Android Developer",
       scopeLabel: "Phạm vi phụ trách",
-      scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, tích hợp quảng cáo đến build AAB và phát hành trên Google Play.",
+      scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, tích hợp quảng cáo đến build AAB và release trên Google Play.",
       challengeLabel: "Bài toán chính",
       challenge: "Xử lý PDF, hình ảnh và tích hợp printer SDK trong codebase Java + Kotlin theo kiến trúc MVP để đảm bảo luồng in ổn định và dễ dùng.",
       techLabel: "Tech nổi bật",
@@ -71,9 +71,9 @@ const CV_DATA = {
       desc: "Ứng dụng ghi âm trên Android với khả năng khởi động nhanh, hỗ trợ nhiều định dạng và quản lý file thuận tiện.",
       role: "Android Developer",
       scopeLabel: "Phạm vi phụ trách",
-      scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, kiểm thử đến build AAB và phát hành trên Google Play.",
+      scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, kiểm thử đến build AAB và release trên Google Play.",
       challengeLabel: "Bài toán chính",
-      challenge: "Xây dựng trải nghiệm ghi âm nhanh, ổn định và dễ dùng với nhiều định dạng đầu ra như M4A, WAV, 3GP; đồng thời hỗ trợ thiết lập ghi âm linh hoạt, waveform trực quan và các tính năng quản lý file như đổi tên, chia sẻ, import và bookmark.",
+      challenge: "Xây dựng trải nghiệm ghi âm nhanh, ổn định và dễ dùng với nhiều định dạng đầu ra như M4A, WAV, 3GP, đồng thời hỗ trợ thiết lập ghi âm linh hoạt, waveform trực quan và các tính năng quản lý file như đổi tên, chia sẻ, import và bookmark.",
       techLabel: "Tech nổi bật",
       tech: "Audio recording, multi-format output (M4A/WAV/3GP), waveform display, Java/Kotlin (MVP)",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
