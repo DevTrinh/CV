@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fillHref('.link-email', `mailto:${CV_DATA.profile.email}`);
     
     document.querySelectorAll('.val-loc').forEach(el => el.textContent = CV_DATA.profile.location);
+    document.querySelectorAll('.val-dob').forEach(el => el.textContent = CV_DATA.profile.dob);
     document.querySelectorAll('.val-phone').forEach(el => el.textContent = CV_DATA.profile.phone);
     document.querySelectorAll('.val-email').forEach(el => el.textContent = CV_DATA.profile.email);
 

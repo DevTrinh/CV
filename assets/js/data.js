@@ -4,6 +4,7 @@ const CV_DATA = {
     name: "Trịnh Văn Mạnh",
     title: "Android Developer — 4 năm kinh nghiệm",
     location: "Hà Nội, Việt Nam",
+    dob: "2002",
     phone: "0889 111 300",
     email: "trinhmanhdiv@gmail.com",
     tagline: "Sẵn sàng trao đổi thêm nếu có vị trí Android Developer phù hợp."
