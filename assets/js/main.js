@@ -25,12 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Điền Contact / Links
     fillHref('.link-phone', `tel:${CV_DATA.profile.phone.replace(/\s+/g, '')}`);
     fillHref('.link-email', `mailto:${CV_DATA.profile.email}`);
-    fillHref('.link-facebook', `https://${CV_DATA.profile.facebook}`);
     
     document.querySelectorAll('.val-loc').forEach(el => el.textContent = CV_DATA.profile.location);
     document.querySelectorAll('.val-phone').forEach(el => el.textContent = CV_DATA.profile.phone);
     document.querySelectorAll('.val-email').forEach(el => el.textContent = CV_DATA.profile.email);
-    document.querySelectorAll('.val-facebook').forEach(el => el.textContent = CV_DATA.profile.facebook);
 
     // Contact block
     fillText('.ct-name', CV_DATA.profile.name);

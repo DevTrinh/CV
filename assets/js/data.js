@@ -2,11 +2,10 @@ const CV_DATA = {
   // Thông tin cơ bản (phần Hero & Footer)
   profile: {
     name: "Trịnh Văn Mạnh",
-    title: "Android Developer — gần 4 năm kinh nghiệm",
+    title: "Android Developer — 4 năm kinh nghiệm",
     location: "Hà Nội, Việt Nam",
     phone: "0889 111 300",
     email: "trinhmanhdiv@gmail.com",
-    facebook: "fb.com/trinhmanhdiv",
     tagline: "Sẵn sàng trao đổi thêm nếu có vị trí Android Developer phù hợp."
   },
 
@@ -35,7 +34,7 @@ const CV_DATA = {
     {
       role: "Android Developer",
       company: "ALLSOFT CO., LTD",
-      period: "04/2022 – 04/2026",
+      period: "03/2022 – 04/2026",
       duration: "",
       domains: ["Tools", "Productivity", "Photo/Video", "Personalization", "Education", "Translation"],
       bullets: [
