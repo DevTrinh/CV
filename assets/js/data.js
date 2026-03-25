@@ -59,6 +59,8 @@ const CV_DATA = {
       scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, tích hợp quảng cáo đến build AAB và phát hành trên Google Play.",
       challengeLabel: "Bài toán chính",
       challenge: "Xử lý PDF, hình ảnh và tích hợp printer SDK trong codebase Java + Kotlin theo kiến trúc MVP để đảm bảo luồng in ổn định và dễ dùng.",
+      techLabel: "Tech nổi bật",
+      tech: "Java, Kotlin, MVP, PDF handling, image processing, printer SDK integration",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp"
     },
