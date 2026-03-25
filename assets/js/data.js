@@ -79,12 +79,17 @@ const CV_DATA = {
     },
     {
       name: "Background Eraser - Remove BG",
-      category: "Photography / Tools",
-      desc: "Ứng dụng tự động xóa nền ảnh bằng AI, phục vụ nhu cầu làm ảnh sản phẩm cho seller online hoặc chỉnh ảnh cá nhân nhanh gọn.",
+      category: "AI / Photo Editing Utility",
+      desc: "Ứng dụng tách nền ảnh trên Android với khả năng xử lý qua API và mô hình offline.",
       role: "Android Developer",
-      contribution: "Phối hợp với UI/UX để hoàn thiện luồng chọn ảnh, preview kết quả, chỉnh sửa và xuất ảnh; đồng thời tham gia triển khai các màn hình chính và tinh chỉnh trải nghiệm sử dụng trước khi phát hành.",
+      scopeLabel: "Phạm vi phụ trách",
+      scope: "Chịu trách nhiệm chính cho phần triển khai kỹ thuật phía Android: thiết kế và phát triển codebase theo MVVM, thiết lập Koin, tích hợp API nội bộ cho xử lý ảnh, triển khai mô hình offline pytorch và chuẩn bị phần code phục vụ quá trình đưa hệ thống lên server cùng devops.",
+      challengeLabel: "Bài toán chính",
+      challenge: "Tổ chức luồng xử lý tách nền theo cả hướng online và offline, cân bằng giữa chất lượng kết quả, độ ổn định và trải nghiệm sử dụng trên thiết bị di động.",
+      techLabel: "Tech nổi bật",
+      tech: "Kotlin, MVVM, Koin, API integration, offline model integration (u2net.ptl)",
       result: "Sản phẩm đạt 100.000+ lượt tải trên Google Play.",
-      playLink: "https://play.google.com/store/apps/details?id=com.fftools.removebackground",
+      playLink: "https://play.google.com/store/apps/details?id=com.fftools.removebackground"
     },
     {
       name: "Fluid Wallpaper: Magic Fluids",
