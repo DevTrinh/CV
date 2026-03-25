@@ -93,11 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const projContainer = document.querySelector('.proj-grid');
     if (projContainer) {
         projContainer.innerHTML = CV_DATA.projects.map(p => {
-            // Hiển thị ảnh QR nếu có cấu hình ở data.js, nếu không fallback về cái icon placeholder
-            const qrHTML = p.qrImage 
-                ? `<a href="${p.playLink}" target="_blank" rel="noopener noreferrer" class="qr-ph cv-has-img" aria-label="Mở ${p.name} trên Google Play" title="Mở Google Play"><img src="${p.qrImage}" alt="QR code cho ${p.name}"></a>`
-                : `<div class="qr-ph" title="Chưa có QR mã"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M16 16h5v5M16 16v5M21 16v5"/></svg></div>`;
-
             return `
             <div class="proj-card">
                 <div class="proj-head">
@@ -112,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="proj-foot">
                     <a href="${p.playLink}" target="_blank" rel="noopener noreferrer" class="proj-play">Google Play ↗</a>
-                    ${qrHTML}
                 </div>
             </div>`;
         }).join('');

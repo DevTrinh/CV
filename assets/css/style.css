@@ -400,35 +400,6 @@ section {
 }
 .proj-play:hover { background: var(--ac); color: #fff; }
 
-.qr-ph {
-  width: 76px;
-  height: 76px;
-  border: 1px dashed var(--border-hi);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: #fff;
-  padding: 4px;
-  text-decoration: none;
-  transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
-}
-.qr-ph svg { width: 18px; height: 18px; color: var(--tx-3); opacity: 0.4; }
-.qr-ph img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  border-radius: 4px;
-}
-.qr-ph:hover {
-  border-color: var(--ac);
-  transform: translateY(-1px);
-}
-
 /* Thay đổi style QR Code khi nó nạp hình ảnh */
 .cv-has-img {
   border: 1px solid var(--border) !important;

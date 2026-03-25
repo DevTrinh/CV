@@ -59,7 +59,6 @@ const CV_DATA = {
       contribution: "Tham gia xuyên suốt ở phía Android từ lúc làm rõ phạm vi tính năng, hoàn thiện giao diện, phát triển các chức năng chính, kiểm thử đến phát hành trên Google Play.",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp",
-      qrImage: "assets/images/qr/falcon.png"
     },
     {
       name: "Máy ghi âm (Có khử ồn)",
@@ -69,7 +68,6 @@ const CV_DATA = {
       contribution: "Tham gia tương đối đầy đủ trong quá trình xây dựng ứng dụng, tập trung vào các tính năng chính liên quan đến ghi âm, hoàn thiện flow sử dụng, kiểm thử và tinh chỉnh trải nghiệm trước khi phát hành.",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.fftools.audio_recorder",
-      qrImage: "assets/images/qr/audio-recorder.png"
     },
     {
       name: "Background Eraser - Remove BG",
@@ -79,7 +77,6 @@ const CV_DATA = {
       contribution: "Phối hợp với UI/UX để hoàn thiện luồng chọn ảnh, preview kết quả, chỉnh sửa và xuất ảnh; đồng thời tham gia triển khai các màn hình chính và tinh chỉnh trải nghiệm sử dụng trước khi phát hành.",
       result: "Sản phẩm đạt 100.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.fftools.removebackground",
-      qrImage: "assets/images/qr/remove-bg.png"
     },
     {
       name: "Fluid Wallpaper: Magic Fluids",
@@ -89,7 +86,6 @@ const CV_DATA = {
       contribution: "Tham gia triển khai các màn hình chính, điều hướng và những điểm tương tác quan trọng; phối hợp với Designer để hoàn thiện visual flow và tinh chỉnh cảm giác sử dụng trước khi phát hành.",
       result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.fftools.fluidwallpaper",
-      qrImage: "assets/images/qr/fluid-wallpaper.png"
     },
     {
       name: "English Japanese Translator",
@@ -99,7 +95,6 @@ const CV_DATA = {
       contribution: "Tham gia phát triển các tính năng chính, sắp xếp lại luồng cho các tác vụ được dùng thường xuyên và tinh chỉnh giao diện để ứng dụng dễ dùng hơn với nhóm người dùng mục tiêu.",
       result: "Sản phẩm đạt 500.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.bktranslator.enlishjapanese",
-      qrImage: "assets/images/qr/en-jp-translator.png"
     },
     {
       name: "AI Trendy Photo/Video Creator",
@@ -109,7 +104,6 @@ const CV_DATA = {
       contribution: "Tham gia triển khai các flow tạo nội dung và tinh chỉnh các bước chính như chọn mẫu, tạo kết quả và xuất file để trải nghiệm sử dụng liền mạch hơn.",
       result: "Sản phẩm đạt 10.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.ai.tools.trend",
-      qrImage: "assets/images/qr/ai-trendy.png"
     }
   ],
 
