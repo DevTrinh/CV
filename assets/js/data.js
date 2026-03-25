@@ -74,7 +74,7 @@ const CV_DATA = {
       challengeLabel: "Bài toán chính",
       challenge: "Xây dựng trải nghiệm ghi âm nhanh, ổn định và dễ dùng với nhiều định dạng đầu ra như M4A, WAV, 3GP; đồng thời hỗ trợ thiết lập ghi âm linh hoạt, waveform trực quan và các tính năng quản lý file như đổi tên, chia sẻ, import và bookmark.",
       techLabel: "Tech nổi bật",
-      tech: "Java, Kotlin, MVP",
+      tech: "Audio recording, multi-format output (M4A/WAV/3GP), waveform display, Java/Kotlin (MVP)",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.fftools.audio_recorder"
     },
