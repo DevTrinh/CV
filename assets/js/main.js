@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${p.role ? `<div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">${p.role}</span></div>` : ''}
                     ${p.scope ? `<div class="pm-row"><span class="pm-k">${p.scopeLabel || 'Phạm vi'}</span><span class="pm-v">${p.scope}</span></div>` : (p.contribution ? `<div class="pm-row"><span class="pm-k">Phạm vi</span><span class="pm-v">${p.contribution}</span></div>` : '')}
                     ${p.challenge ? `<div class="pm-row"><span class="pm-k">${p.challengeLabel || 'Bài toán'}</span><span class="pm-v">${p.challenge}</span></div>` : ''}
+                    ${p.tech ? `<div class="pm-row"><span class="pm-k">${p.techLabel || 'Công nghệ'}</span><span class="pm-v">${p.tech}</span></div>` : ''}
                     ${p.result ? `<div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">${p.result}</span></div>` : ''}
                 </div>
                 <div class="proj-foot">

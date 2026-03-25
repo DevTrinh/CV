@@ -64,13 +64,18 @@ const CV_DATA = {
       playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp"
     },
     {
-      name: "Máy ghi âm (Có khử ồn)",
-      category: "Tools / Productivity",
-      desc: "Ứng dụng ghi âm chất lượng cao, tích hợp lọc tiếng ồn để hỗ trợ nhu cầu học tập, họp hành và công việc hằng ngày.",
+      name: "Voice Audio Record",
+      category: "Productivity / Audio Utility",
+      desc: "Ứng dụng ghi âm trên Android với khả năng khởi động nhanh, hỗ trợ nhiều định dạng và quản lý file thuận tiện.",
       role: "Android Developer",
-      contribution: "Tham gia tương đối đầy đủ trong quá trình xây dựng ứng dụng, tập trung vào các tính năng chính liên quan đến ghi âm, hoàn thiện flow sử dụng, kiểm thử và tinh chỉnh trải nghiệm trước khi phát hành.",
+      scopeLabel: "Phạm vi phụ trách",
+      scope: "Phụ trách end-to-end phía Android: từ tiếp nhận yêu cầu, phân tích sản phẩm, chốt công nghệ, thiết kế UI/UX, phát triển tính năng, kiểm thử đến build AAB và phát hành trên Google Play.",
+      challengeLabel: "Bài toán chính",
+      challenge: "Xây dựng trải nghiệm ghi âm nhanh, ổn định và dễ dùng với nhiều định dạng đầu ra như M4A, WAV, 3GP; đồng thời hỗ trợ thiết lập ghi âm linh hoạt, waveform trực quan và các tính năng quản lý file như đổi tên, chia sẻ, import và bookmark.",
+      techLabel: "Tech nổi bật",
+      tech: "Java, Kotlin, MVP",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
-      playLink: "https://play.google.com/store/apps/details?id=com.fftools.audio_recorder",
+      playLink: "https://play.google.com/store/apps/details?id=com.fftools.audio_recorder"
     },
     {
       name: "Background Eraser - Remove BG",
