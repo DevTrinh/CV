@@ -56,7 +56,7 @@ const CV_DATA = {
       category: "Productivity / Printing Utility",
       desc: "Ứng dụng hỗ trợ kết nối và in tài liệu trực tiếp từ điện thoại, phục vụ nhu cầu in ảnh, PDF và các nội dung phổ biến trên thiết bị di động.",
       role: "Android Developer",
-      contribution: "Tham gia xuyên suốt ở phía Android từ lúc làm rõ phạm vi tính năng, hoàn thiện giao diện, phát triển các chức năng chính, kiểm thử đến phát hành trên Google Play.",
+      contribution: "Phụ trách xuyên suốt phía Android từ giai đoạn tiếp nhận yêu cầu, tự phân tích sản phẩm, lựa chọn giải pháp kỹ thuật, thiết kế UI/UX, phát triển tính năng, tích hợp quảng cáo, kiểm thử đến đóng gói bản AAB để phát hành trên Google Play.",
       result: "Sản phẩm đạt 1.000.000+ lượt tải trên Google Play.",
       playLink: "https://play.google.com/store/apps/details?id=com.falcon.printerapp",
     },

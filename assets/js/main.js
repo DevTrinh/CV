@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="proj-desc">${p.desc}</p>
                 <div class="proj-meta">
                     <div class="pm-row"><span class="pm-k">Vai trò</span><span class="pm-v">${p.role}</span></div>
-                    <div class="pm-row"><span class="pm-k">Đóng góp</span><span class="pm-v">${p.contribution}</span></div>
+                    <div class="pm-row"><span class="pm-k">Phạm vi</span><span class="pm-v">${p.contribution}</span></div>
                     <div class="pm-row"><span class="pm-k">Kết quả</span><span class="pm-v">${p.result}</span></div>
                 </div>
                 <div class="proj-foot">
