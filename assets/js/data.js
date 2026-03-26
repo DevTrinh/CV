@@ -17,7 +17,7 @@ const CV_DATA = {
   aboutParagraphs: [
     "Tôi tập trung chính vào Android native với Kotlin và Java, quen với quá trình phát triển tính năng từ lúc làm rõ yêu cầu, triển khai, kiểm thử đến release và maintain.",
     "Trong gần 4 năm làm việc, tôi đã tham gia nhiều nhóm sản phẩm khác nhau như tools, productivity, photo/video, personalization, education và translation. Trải nghiệm này giúp tôi thích nghi khá nhanh với các bài toán người dùng khác nhau và giữ được góc nhìn sản phẩm bên cạnh phần triển khai kỹ thuật.",
-    "Ngoài phần phát triển ứng dụng, tôi thường phối hợp với PM và Designer để rà soát luồng sử dụng, hoàn thiện UI/UX và trao đổi cách triển khai. Ở giai đoạn gần đây, tôi cũng có thời gian hỗ trợ một team nhỏ 3–5 người ở các đầu việc như code review, technical discussion, Git workflow và onboarding cho thành viên mới."
+    "Ngoài phần phát triển ứng dụng, tôi thường phối hợp với PM và Designer để rà soát luồng sử dụng, hoàn thiện UI/UX và trao đổi cách triển khai. Tôi cũng chủ động ứng dụng AI tools trong nghiên cứu sản phẩm, phân tích codebase, tạo prototype nhanh, hỗ trợ review/refactor và tăng tốc quy trình release. Ở giai đoạn gần đây, tôi có thời gian hỗ trợ một team nhỏ 3–5 người ở các đầu việc như code review, technical discussion, Git workflow và onboarding cho thành viên mới."
   ],
 
   // Danh sách Kỹ năng
@@ -27,7 +27,17 @@ const CV_DATA = {
     { label: "Data & Async", tags: ["Coroutines", "Flow", "Room", "DataStore", "WorkManager"] },
     { label: "Networking / DI", tags: ["Ktor", "Retrofit", "Koin", "Hilt", "Dagger"] },
     { label: "Platforms", tags: ["Firebase", "AdMob", "IAP"] },
-    { label: "Engineering", tags: ["Git", "Code Review", "Debugging", "Technical Planning", "Mentoring", "Product Thinking"] }
+    { label: "Engineering", tags: ["Git", "Code Review", "Debugging", "Technical Planning", "Mentoring", "Product Thinking"] },
+    {
+      label: "AI Tools",
+      tags: [
+        "Phân tích codebase",
+        "Tạo prototype nhanh",
+        "Hỗ trợ review/refactor",
+        "Xử lý tài liệu kỹ thuật",
+        "Tăng tốc release workflow"
+      ]
+    }
   ],
 
   // Thông tin kinh nghiệm làm việc (có thể thêm object nếu có nhiều công ty)
